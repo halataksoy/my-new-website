@@ -36,7 +36,7 @@ Proje ticari amaç taşımamaktadır.
 
 Projeyi çalıştırmadan önce aşağıdakilerin yüklü olduğundan emin olun:
 
-- **Node.js** (sürüm 18.x veya 20.x)  
+- **Node.js** 
   👉 [https://nodejs.org](https://nodejs.org)
 - **npm** (Node ile birlikte gelir)
 - **Angular CLI** (global olarak kurulu olmalı)

@@ -1,0 +1,54 @@
+.map-section {
+  width: 100%;
+  height: 340px;
+}
+
+.map-section iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.site-footer {
+  background: #a7c6df;
+  padding: 1rem 0;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.footer-inner p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #000;
+}
+
+.footer-social {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-social a svg {
+  width: 20px;
+  height: 20px;
+  fill: #000;
+  transition: opacity .2s;
+}
+
+.footer-social a:hover svg {
+  opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

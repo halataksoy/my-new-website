@@ -1,0 +1,50 @@
+.hero,
+section.hero {
+  margin-top: 80px; // nav fixed-top olduğu için
+}
+
+.custom-nav .nav-logo {
+  height: 54px;
+}
+
+.custom-nav .nav-link {
+  position: relative;
+  font-size: 0.95rem;
+  color: #1f2933; // koyu gri
+  transition: color 0.2s ease;
+}
+
+.custom-nav .nav-link:hover,
+.custom-nav .nav-link:focus,
+.custom-nav .nav-link.active {
+  color: #002b71;
+}
+
+@media (min-width: 992px) {
+  .custom-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.4rem;
+    width: 0;
+    height: 2px;
+    background: #002b71;
+    transition: width 0.2s ease;
+  }
+
+  .custom-nav .nav-link:hover::after,
+  .custom-nav .nav-link.active::after {
+    width: 100%;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .custom-nav .navbar-collapse {
+    background: #fff;
+    padding: 0.75rem 0;
+  }
+  .custom-nav .nav-link {
+    padding-left: 0;
+  }
+}
+

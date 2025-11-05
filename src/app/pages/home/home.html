@@ -1,0 +1,993 @@
+<app-navbar></app-navbar>
+<!--FORM BÖLÜMÜ BÖLÜM1-->
+<section class="hero d-flex align-items-center" id="homehalat">
+  <div class="container">
+    <div class="row align-items-center g-4">
+      <!-- left-->
+      <div class="col-lg-6 text-center text-lg-start text-white hero-text">
+        <h1 class="display-5 fw-normal mb-4">
+          Doğal saç ekimi merkezi
+        </h1>
+      </div>
+
+      <!-- right -->
+      <div class="col-lg-5 offset-lg-1 col-md-8 mx-auto hero-form-wrapper">
+        <div class="card p-4 shadow-lg border-2 border-primary">
+          <form [formGroup]="contactForm" (ngSubmit)="submit()">
+            <div class="mb-3">
+              <label class="form-label">İsminiz *</label>
+              <input
+                type="text"
+                class="form-control"
+                formControlName="name"
+                placeholder="Halat Aksoy"
+              />
+              <div class="text-danger small" *ngIf="f['name'].touched && f['name'].invalid">
+                <div *ngIf="f['name'].errors?.['required']">İsim zorunludur.</div>
+                <div *ngIf="f['name'].errors?.['minlength']">En az 2 karakter girin.</div>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Telefon Numarası *</label>
+              <input
+                type="text"
+                class="form-control"
+                formControlName="phone"
+                placeholder="+90 539 123 45 67"
+              />
+              <div class="text-danger small" *ngIf="f['phone'].touched && f['phone'].invalid">
+                <div *ngIf="f['phone'].errors?.['required']">Telefon zorunludur.</div>
+                <div *ngIf="f['phone'].errors?.['pattern']">Geçerli bir telefon girin.</div>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">E-mail</label>
+              <input
+                type="email"
+                class="form-control"
+                formControlName="email"
+                placeholder="example@gmail.com"
+              />
+              <div class="text-danger small" *ngIf="f['email'].touched && f['email'].invalid">
+                <div *ngIf="f['email'].errors?.['email']">Geçerli bir e-mail girin.</div>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100 py-2">
+              Ücretsiz Danışmanlık Al
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--HAKKIMDA KISIM2-->
+<section class="py-5 bg-white" id="about">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- left-->
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <div class="flex items-center mb-2">
+          <span class="text-custom-black text-lg mr-2" style="font-size: 1.2rem;">★ ★ ★ ★ ★ </span>
+        </div>
+        <p class="text-uppercase small mb-2" style="letter-spacing: .3rem;">Dr. Terziler</p>
+        <h1 class="fw-normal mb-4" style="font-size: 2.7rem;"><i>Sanatın Saçla Uyumu</i></h1>
+        <p class="text-muted" style="font-size: 1.2rem;">
+          35 yıllık deneyimi ve binlerce başarılı operasyonu ile Dr. Servet Terziler, “Saçın Picassosu” olarak tanınmaktadır.
+          Tüm kıtalardan misafirlerini ağırlayan Dr. Terziler, doğal ve kalıcı estetik çözümler sunmaktadır. Avrupa ve Amerika’da
+          düzenlenen konferans ve seminerlere katılmanın yanı sıra, yeniliğe olan tutkusu sayesinde Türkiye’nin ilk “Saç Ekim Robotu”nu tanıtmıştır.
+        </p>
+        <p class="text-muted mb-0" style="font-size: 1.2rem;">
+          Dr. Terziler Exclusive Clinic, ileri teknoloji ve uzman ekibiyle 360° hizmet protokolü sunar ve seçkin bir deneyim sağlar.
+        </p>
+      </div>
+
+      <!-- right-sliderrrrcnm -->
+      <div class="col-lg-6">
+        <div id="aboutCarousel" class="carousel slide shadow-sm rounded-3 overflow-hidden" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="assets/Dr-Terziler-5.webp" class="d-block w-100" alt="Dr Terziler 1">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/Dr-Terziler-3.webp" class="d-block w-100" alt="Dr Terziler 2">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/Dr-Terziler-2.webp" class="d-block w-100" alt="Dr Terziler 3">
+            </div>
+          </div>
+
+          <button class="carousel-control-prev" type="button" data-bs-target="#aboutCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#aboutCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ÖDÜLLER BÖLÜMÜ KISIM3-->
+<section class="py-5 bg-light">
+  <div class="container">
+    <p class="text-uppercase text-muted small mb-2" style="letter-spacing: 0.3rem;">
+      Ödüllerimiz & Sertifikalar
+    </p>
+    <h2 class="fw-normal mb-5" style="font-family: Georgia, serif; font-size: 2.4rem;">
+      Taçlandırılmış Mükemmellik
+    </h2>
+
+    <div class="row g-4">
+      <!-- Kart 1 lorem-->
+      <div class="col-12 col-sm-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body text-center">
+            <img src="assets/Dr-Terziler-Awards1.webp" class="rounded-circle mb-3" width="120" height="120" alt="AACI">
+            <h5 class="card-title fw-semibold">AACI - Kalite & Hasta Güvenliği</h5>
+            <p class="card-text small text-muted">
+              AACI tarafından hasta bakım ve güvenliğinin en yüksek standartlarına uygunluk.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kart 2 -->
+      <div class="col-12 col-sm-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body text-center">
+            <img src="assets/Dr-Terziler-Awards2.webp" class="rounded-circle mb-3" width="120" height="120" alt="Avrupa’nın En İyi Kamu Hizmeti İç Mekân">
+            <h5 class="card-title fw-semibold">Avrupa’nın En İyi Kamu Hizmeti İç Mekân</h5>
+            <p class="card-text small text-muted">
+              Kamu iç mekanlarında olağanüstü tasarım ve hizmet kalitesi ile tanınmıştır.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kart 3 -->
+      <div class="col-12 col-sm-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body text-center">
+            <img src="assets/Dr-Terziler-Awards3.webp" class="rounded-circle mb-3" width="120" height="120" alt="Quality of Magazine">
+            <h5 class="card-title fw-semibold">En İyi Kalite Saç Ekimi Merkezi</h5>
+            <p class="card-text small text-muted">
+              Quality of Magazine tarafından kalitede örnek gösterilmiştir.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kart 4 -->
+      <div class="col-12 col-sm-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body text-center">
+            <img src="assets/Dr-Terziler-Awards4.webp" class="rounded-circle mb-3" width="120" height="120" alt="Klass Magazine">
+            <h5 class="card-title fw-semibold">En İyi Saç Ekimi Doktoru – Klass</h5>
+            <p class="card-text small text-muted">
+              Saç ekimi cerrahisindeki mükemmeliyet nedeniyle ödüllendirilmiştir.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kart 5 -->
+      <div class="col-12 col-sm-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body text-center">
+            <img src="assets/Dr-Terziler-Awards5.webp" class="rounded-circle mb-3" width="120" height="120" alt="Başarılı Doktor Ödülü">
+            <h5 class="card-title fw-semibold">Yılın En Başarılı Saç Ekimi Doktoru</h5>
+            <p class="card-text small text-muted">
+              Yılın en başarılı saç ekimi doktoru olarak onurlandırılmıştır.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kart 6 -->
+      <div class="col-12 col-sm-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body text-center">
+            <img src="assets/Dr-Terziler-Awards6.webp" class="rounded-circle mb-3" width="120" height="120" alt="Türkiye'nin En Başarılı Saç Ekimi Doktoru">
+            <h5 class="card-title fw-semibold">Türkiye’nin En Başarılı Saç Ekimi Doktoru</h5>
+            <p class="card-text small text-muted">
+              Türkiye’de örnek gösterilen saç ekimi başarısı ile ödüllendirilmiştir.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--BEFORE AFTER BÖLÜMÜ BÖLÜM4-->
+<section class="before-after-section" id="before-after">
+  <div class="container">
+    <p class="section-eyebrow">ÖNCESİ VE SONRASI</p>
+    <h2 class="section-title">Her Greftte Misafir Memnuniyeti</h2>
+    <p class="section-subtitle">
+      Dr. Terziler Exclusive Clinic’te gerçekleştirilen çarpıcı dönüşümleri görün
+    </p>
+
+    <div id="beforeAfterCarousel" class="carousel slide" data-bs-ride="false">
+      <div class="carousel-inner">
+
+        <!-- sliderı 3 3 1 ayırdık-->
+        <div class="carousel-item active">
+          <div class="row g-4">
+            <!-- kart 1 -->
+            <div class="col-lg-4">
+              <div class="ba-card">
+                <div class="ba-images">
+                  <img src="assets/before-after/Before-After-1.webp" class="img-fluid ba-img" alt="before-after 1">
+                </div>
+                <div class="ba-meta">
+                  <div class="d-flex justify-content-between mb-1">
+                    <span class="ba-age">43 yaş</span>
+                    <span class="ba-method">Robotic DHI</span>
+                  </div>
+                  <div class="d-flex gap-2 flex-wrap">
+                    <span class="ba-pill">12 Ay Sonra</span>
+                    <span class="ba-pill">Almanya</span>
+                    <span class="ba-pill">4567 Greft</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- kart 2 -->
+            <div class="col-lg-4">
+              <div class="ba-card">
+                <div class="ba-images">
+                  <img src="assets/before-after/Before-After-2.webp" class="img-fluid ba-img" alt="before-after 2">
+                </div>
+                <div class="ba-meta">
+                  <div class="d-flex justify-content-between mb-1">
+                    <span class="ba-age">39 yaş</span>
+                    <span class="ba-method">Robotic DHI</span>
+                  </div>
+                  <div class="d-flex gap-2 flex-wrap">
+                    <span class="ba-pill">13 Ay Sonra</span>
+                    <span class="ba-pill">Türkiye</span>
+                    <span class="ba-pill">4553 Greft</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- kart 3 -->
+            <div class="col-lg-4">
+              <div class="ba-card">
+                <div class="ba-images">
+                  <img src="assets/before-after/Before-After-3.webp" class="img-fluid ba-img" alt="before-after 3">
+                </div>
+                <div class="ba-meta">
+                  <div class="d-flex justify-content-between mb-1">
+                    <span class="ba-age">38 yaş</span>
+                    <span class="ba-method">Robotic DHI</span>
+                  </div>
+                  <div class="d-flex gap-2 flex-wrap">
+                    <span class="ba-pill">13 Ay Sonra</span>
+                    <span class="ba-pill">İtalya</span>
+                    <span class="ba-pill">4707 Greft</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- slider -->
+        <div class="carousel-item">
+          <div class="row g-4">
+            <div class="col-lg-4">
+              <div class="ba-card">
+                <div class="ba-images">
+                  <img src="assets/before-after/Before-After-4.webp" class="img-fluid ba-img" alt="before-after 4">
+                </div>
+                <div class="ba-meta">
+                  <div class="d-flex justify-content-between mb-1">
+                    <span class="ba-age">37 yaş</span>
+                    <span class="ba-method">Robotic DHI</span>
+                  </div>
+                  <div class="d-flex gap-2 flex-wrap">
+                    <span class="ba-pill">12 Ay Sonra</span>
+                    <span class="ba-pill">İspanya</span>
+                    <span class="ba-pill">4291 Greft</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4">
+              <div class="ba-card">
+                <div class="ba-images">
+                  <img src="assets/before-after/Before-After-5.webp" class="img-fluid ba-img" alt="before-after 5">
+                </div>
+                <div class="ba-meta">
+                  <div class="d-flex justify-content-between mb-1">
+                    <span class="ba-age">35 yaş</span>
+                    <span class="ba-method">Robotic DHI</span>
+                  </div>
+                  <div class="d-flex gap-2 flex-wrap">
+                    <span class="ba-pill">10 Ay Sonra</span>
+                    <span class="ba-pill">Türkiye</span>
+                    <span class="ba-pill">4100 Greft</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4">
+              <div class="ba-card">
+                <div class="ba-images">
+                  <img src="assets/before-after/Before-After-6.webp" class="img-fluid ba-img" alt="before-after 6">
+                </div>
+                <div class="ba-meta">
+                  <div class="d-flex justify-content-between mb-1">
+                    <span class="ba-age">42 yaş</span>
+                    <span class="ba-method">Robotic DHI</span>
+                  </div>
+                  <div class="d-flex gap-2 flex-wrap">
+                    <span class="ba-pill">12 Ay Sonra</span>
+                    <span class="ba-pill">İtalya</span>
+                    <span class="ba-pill">4500 Greft</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- slider-->
+        <div class="carousel-item">
+          <div class="row g-4">
+            <div class="col-lg-4">
+              <div class="ba-card">
+                <div class="ba-images">
+                  <img src="assets/before-after/Before-After-7.webp" class="img-fluid ba-img" alt="before-after 7">
+                </div>
+                <div class="ba-meta">
+                  <div class="d-flex justify-content-between mb-1">
+                    <span class="ba-age">38 yaş</span>
+                    <span class="ba-method">Robotic DHI</span>
+                  </div>
+                  <div class="d-flex gap-2 flex-wrap">
+                    <span class="ba-pill">13 Ay Sonra</span>
+                    <span class="ba-pill">Türkiye</span>
+                    <span class="ba-pill">4700 Greft</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4">
+              <div class="ba-card">
+                <div class="ba-images">
+                  <img src="assets/before-after/Before-After-8.webp" class="img-fluid ba-img" alt="before-after 8">
+                </div>
+                <div class="ba-meta">
+                  <div class="d-flex justify-content-between mb-1">
+                    <span class="ba-age">36 yaş</span>
+                    <span class="ba-method">Robotic DHI</span>
+                  </div>
+                  <div class="d-flex gap-2 flex-wrap">
+                    <span class="ba-pill">12 Ay Sonra</span>
+                    <span class="ba-pill">Hollanda</span>
+                    <span class="ba-pill">4300 Greft</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4">
+              <div class="ba-card">
+                <div class="ba-images">
+                  <img src="assets/before-after/Before-After-9.webp" class="img-fluid ba-img" alt="before-after 9">
+                </div>
+                <div class="ba-meta">
+                  <div class="d-flex justify-content-between mb-1">
+                    <span class="ba-age">41 yaş</span>
+                    <span class="ba-method">Robotic DHI</span>
+                  </div>
+                  <div class="d-flex gap-2 flex-wrap">
+                    <span class="ba-pill">14 Ay Sonra</span>
+                    <span class="ba-pill">İtalya</span>
+                    <span class="ba-pill">4600 Greft</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- slider 2 tane boş kalacak başa mı sarsa? düşünülebilir -->
+        <div class="carousel-item">
+          <div class="row g-4">
+            <div class="col-lg-4">
+              <div class="ba-card">
+                <div class="ba-images">
+                  <img src="assets/before-after/Before-After-10.webp" class="img-fluid ba-img" alt="before-after 10">
+                </div>
+                <div class="ba-meta">
+                  <div class="d-flex justify-content-between mb-1">
+                    <span class="ba-age">38 yaş</span>
+                    <span class="ba-method">Robotic DHI</span>
+                  </div>
+                  <div class="d-flex gap-2 flex-wrap">
+                    <span class="ba-pill">13 Ay Sonra</span>
+                    <span class="ba-pill">Türkiye</span>
+                    <span class="ba-pill">4200 Greft</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- boş kolonlar için hiza ekle todo-->
+            <div class="col-lg-4 d-none d-lg-block"></div>
+            <div class="col-lg-4 d-none d-lg-block"></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#beforeAfterCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#beforeAfterCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+
+      <!-- indicators -->
+      <div class="carousel-indicators mt-4">
+        <button type="button" data-bs-target="#beforeAfterCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#beforeAfterCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#beforeAfterCarousel" data-bs-slide-to="2"></button>
+        <button type="button" data-bs-target="#beforeAfterCarousel" data-bs-slide-to="3"></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--YENİLİK VE UZMANLIK BÖLÜMÜ BÖLÜM5-->
+<section class="why-section py-5" >
+  <div class="container">
+    <p class="why-eyebrow mb-2 font-barlow-condensed">NEDEN DR. TERZİLER?</p>
+    <h2 class="why-title mb-4 font-barlow-condensed">Sizin İçin Yenilik ve Uzmanlık</h2>
+
+    <div class="row g-4 justify-content-center">
+      <!-- kart 1 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card why-card h-100 text-center">
+          <div class="why-icon mb-3">
+            <img src="assets/icons/SVG1.svg" alt="icon" class="img-fluid">
+          </div>
+          <h5 class="why-card-title">Yeni Nesil Teknoloji</h5>
+          <p class="why-card-text">
+            Yeni nesil, ileri saç ekim teknolojilerini kullanarak sıra dışı sonuçlar elde ediyoruz.
+          </p>
+        </div>
+      </div>
+
+      <!-- kart 2 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card why-card h-100 text-center">
+          <div class="why-icon mb-3">
+            <img src="assets/icons/SVG2.svg" alt="icon" class="img-fluid">
+          </div>
+          <h5 class="why-card-title">35 Yıllık Deneyim</h5>
+          <p class="why-card-text">
+            35 yılı aşkın tecrübe ile dünya standartlarında saç ekimi deneyimi sunuyoruz.
+          </p>
+        </div>
+      </div>
+
+      <!-- kart 3 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card why-card h-100 text-center">
+          <div class="why-icon mb-3">
+            <img src="assets/icons/SVG3.svg" alt="icon" class="img-fluid">
+          </div>
+          <h5 class="why-card-title">Prestijli Konum</h5>
+          <p class="why-card-text">
+            İstanbul Etiler’deki seçkin kliniğimizde misafirlerimizi ağırlıyoruz.
+          </p>
+        </div>
+      </div>
+
+      <!-- kart 4 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card why-card h-100 text-center">
+          <div class="why-icon mb-3">
+            <img src="assets/icons/SVG4.svg" alt="icon" class="img-fluid">
+          </div>
+          <h5 class="why-card-title">Olağanüstü Hizmet</h5>
+          <p class="why-card-text">
+            Tedavi öncesi ve sonrası süreçlerde tamamen ‘exclusive’ hizmet yaklaşımı.
+          </p>
+        </div>
+      </div>
+
+      <!-- kart 5 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card why-card h-100 text-center">
+          <div class="why-icon mb-3">
+            <img src="assets/icons/SVG5.svg" alt="icon" class="img-fluid">
+          </div>
+          <h5 class="why-card-title">Suit Odalar</h5>
+          <p class="why-card-text">
+            İşlem sonrası özel dinlenme alanları ve konforlu odalar.
+          </p>
+        </div>
+      </div>
+
+      <!-- kart 6 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card why-card h-100 text-center">
+          <div class="why-icon mb-3">
+            <img src="assets/icons/SVG6.svg" alt="icon" class="img-fluid">
+          </div>
+          <h5 class="why-card-title">Sıradışı Memnuniyet</h5>
+          <p class="why-card-text">
+            Uzun süreli izlem ve garanti sertifikasıyla desteklenen sonuçlar.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--HİZMETLERİMİ BÖLÜM 6-->
+<section class="services-section py-5" id="services">
+  <div class="container">
+    <p class="text-uppercase fw-semibold text-secondary mb-1 small">HİZMETLERİMİZ</p>
+    <h2 class="section-title mb-4">Her Tedavide Zarafet</h2>
+
+    <div class="row g-4">
+      <!-- 1. Kart -->
+      <div class="col-lg-4 col-md-6">
+        <div class="service-card h-100 p-4 shadow-sm rounded-4">
+          <div class="ratio ratio-16x9 mb-3">
+            <iframe
+              src="https://www.youtube.com/embed/peV8Iv2E8FM?start=1"
+              title="Picasso Robotic DHI"
+              allowfullscreen
+            ></iframe>
+          </div>
+
+          <h5 class="fw-bold mb-2">Picasso Robotic DHI</h5>
+          <div class="text-warning small mb-3">★ ★ ★ ★ ★</div>
+
+          <p class="service-text">
+            Bu tedavi, kliniğimizin en özel uygulamasıdır. Dr. Terziler’in “Saçın Picassosu” ünvanından esinlenerek adlandırılmıştır.
+          </p>
+
+          <ul class="service-list">
+            <li><strong>Dr. Terziler’e Özel Çizim:</strong> Saç ekimi işlemi, Dr. Servet Terziler tarafından kişisel olarak organize edilmektedir.</li>
+            <li><strong>Özel İlgi:</strong> Dr. Terziler’in kuyumcu titizliğiyle olağanüstü sonuçlar elde edilmektedir.</li>
+            <li><strong>Hızlı İyileşme:</strong> Benzersiz bir yöntem sayesinde sosyal hayata hızlı bir dönüş sağlanır.</li>
+            <li><strong>Kalıcı Güzellik:</strong> Kalıcı sonuçlar ve tedavi sonrası 1 yıl boyunca takip bakımı sağlanmaktadır.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 2. Kart -->
+      <div class="col-lg-4 col-md-6">
+        <div class="service-card h-100 p-4 shadow-sm rounded-4">
+          <div class="ratio ratio-16x9 mb-3">
+            <iframe
+              src="https://www.youtube.com/embed/3h3Napl098g"
+              title="Robotic DHI"
+              allowfullscreen
+            ></iframe>
+          </div>
+
+          <h5 class="fw-bold mb-2">Robotic DHI</h5>
+          <div class="text-warning small mb-3">★ ★ ★ ★ ★</div>
+
+          <p class="service-text">
+            Gelişmiş teknolojiyle titiz hassasiyet birleştirilerek, optimal saç ekimi sonuçları elde edilmektedir.
+          </p>
+
+          <ul class="service-list">
+            <li><strong>Gerçek Zamanlı Greft İzleme:</strong> Ameliyat sırasında ilerlemeniz takip edilmektedir.</li>
+            <li><strong>Büyüme Faktörü ve UV Işık Tedavisi:</strong> Greft canlılığı artırılmaktadır.</li>
+            <li><strong>Kayıtlı İşlemler:</strong> İşlem detaylarınızın bulunduğu bir bellek kartı sağlanmaktadır.</li>
+            <li><strong>Minimal Hasar:</strong> Daha az invaziv işlemler için ince iğneler kullanılır ve kalıcı iz bırakılmaz.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 3. Kart -->
+      <div class="col-lg-4 col-md-6">
+        <div class="service-card h-100 p-4 shadow-sm rounded-4">
+          <div class="ratio ratio-16x9 mb-3">
+            <iframe
+              src="https://www.youtube.com/embed/IgidA8o9Xys"
+              title="Sapphire FUE"
+              allowfullscreen
+            ></iframe>
+          </div>
+
+          <h5 class="fw-bold mb-2">Sapphire FUE</h5>
+          <div class="text-warning small mb-3">★ ★ ★ ★ ★</div>
+
+          <p class="service-text">
+            Gerçek safir uçlu kalemler kullanılarak harika sonuçlar elde etmek için sıklıkla tercih edilen bir yöntemdir.
+          </p>
+
+          <ul class="service-list">
+            <li><strong>Özel 0.70 mm Choi Kalemi:</strong> Dünyanın ilk ve tek 0.70 mm safir uçlu kalemi ile mucizevi sonuçlar elde edilmektedir.</li>
+            <li><strong>Konfor için Sedasyon:</strong> Ağrısız, rüya gibi bir işlem sağlanmaktadır.</li>
+            <li><strong>Doğal Sonuçlar:</strong> Titiz bakım ile kalın, doğal saçlar elde edilmektedir.</li>
+            <li><strong>Hızlı İyileşme:</strong> Minimal dinlenme süresiyle normal aktivitelere dönüş kolaylaştırılmaktadır.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KAPSAM BÖLÜM 7-->
+<section class="py-5 premium-section" id="scope">
+  <div class="container">
+    <div class="row justify-content-center mb-4">
+      <div class="col-lg-6">
+        <p class="text-uppercase small text-muted mb-1">
+          Kapsam Detayları
+        </p>
+        <h2 class="font-normal text-custom-black  mb-2 font-gilda" style="font-family: 'Georgia', serif;">
+          'Premium' Saç Ekimi
+        </h2>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <ul class="list-unstyled text-start premium-list mx-auto">
+          <li>Sedasyon ile ağrısız ve acısız işlem</li>
+          <li>Kişiye özel tek kullanımlık en ince ve en keskin safir uç</li>
+          <li>Misafirlerimizin taleplerine göre klinikte dünya mutfaklarından öğle yemeği</li>
+          <li>
+            Saç ekimi sonrası yıkama gerektirmeyen bakım
+            (dünyada ilk kez antibakteriyel yara bakımı ve nemlendirici sprey)
+          </li>
+          <li>
+            Ekimi takiben kullanılacak ağrı kesiciler, anti-edema ilaçları, antibiyotikler,
+            buz jeli, boyun yastığı
+          </li>
+          <li>Bir ay boyunca Feeluxo saç bakım seti (serum, şampuan, kapsüller)</li>
+          <li>Kapsamlı kan testi</li>
+          <li>Saç ekimi sonrası bir yıl takip</li>
+          <li>Memnuniyet garantisi</li>
+        </ul>
+
+        <div class="text-center mt-4">
+          <button class="btn px-4 py-2 text-white fw-bold" style="background-color: rgb(0 30 110)">
+            Ücretsiz Danışmanlık Al
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--REFERANSLAR BÖLÜM 8-->
+<section class="refs-section py-5" id="refs">
+  <div class="container">
+    <div id="refsCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+
+        <!-- slider 1 -->
+        <div class="carousel-item active">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-5">
+              <p class="refs-eyebrow text-uppercase small mb-2">Referanslar</p>
+              <h2 class="refs-title mb-3">Ramazan'ın Saç Ekimi Yolculuğu</h2>
+              <p class="refs-text">
+                Bugün, kliniğimizde 9 ay önce robotik DHI işlemi uyguladığımız misafirimiz Ramazan Kelepçe’yi tekrar ağırladık.
+                Yeni saçlarından duyduğu memnuniyeti aktarırken yaşadığı deneyimden ne denli tatmin olduğu paylaştı.
+                Kendisine sağlıklı günler diliyoruz. 🌟
+              </p>
+            </div>
+            <div class="col-lg-7">
+              <div class="ratio ratio-16x9 rounded overflow-hidden refs-video">
+                <iframe
+                  src="https://www.youtube.com/embed/LrRNEGAuuHg"
+                  title="Ramazan'ın yolculuğu"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- slider 2 -->
+        <div class="carousel-item">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-5">
+              <p class="refs-eyebrow text-uppercase small mb-2">Referanslar</p>
+              <h2 class="refs-title mb-3">Alper'in Saç Ekimi Yolculuğu</h2>
+              <p class="refs-text">
+                Üniversite öğrencisi misafirimiz Alper, seyrelmiş saçlarını sıklaştırmak için kliniğimizi tercih etti.
+                Picasso dokunuşuyla doğal görünümlü, canlı saçlara kavuştu ve memnuniyetini bizimle paylaştı. 💙
+              </p>
+            </div>
+            <div class="col-lg-7">
+              <div class="ratio ratio-16x9 rounded overflow-hidden refs-video">
+                <iframe
+                  src="https://www.youtube.com/embed/BHJlVBeAZ7A"
+                  title="Alper'in yolculuğu"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- slider 3 -->
+        <div class="carousel-item">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-5">
+              <p class="refs-eyebrow text-uppercase small mb-2">Referanslar</p>
+              <h2 class="refs-title mb-3">Ali'nin Saç Ekimi Yolculuğu</h2>
+              <p class="refs-text">
+                Ali Bey daha önce başarısız bir deneyim yaşamıştı. Kliniğimizde robotik DHI ile
+                doğal saç yönüne uygun, sık ve tatmin edici bir sonuç elde edildi. Kendisine teşekkür ediyoruz. 👏
+              </p>
+            </div>
+            <div class="col-lg-7">
+              <div class="ratio ratio-16x9 rounded overflow-hidden refs-video">
+                <iframe
+                  src="https://www.youtube.com/embed/ycaount_z_g"
+                  title="Ali'nin yolculuğu"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- oklar -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#refsCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#refsCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+
+      <!-- indikatör -->
+      <div class="carousel-indicators mt-4">
+        <button type="button" data-bs-target="#refsCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+        <button type="button" data-bs-target="#refsCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#refsCarousel" data-bs-slide-to="2"></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SÜREÇ BÖLÜMÜ BÖLÜM9 -->
+<section class="process-section" id="process">
+  <div class="container">
+    <img src="assets/Dr-Terziler-Clinic.webp" alt="klinik" class="mx-auto w-100 px-2 my-8 img-fluid mb-4" />
+    <div class="accordion-list">
+      <div
+        class="process-item"
+        *ngFor="let step of processSteps; let i = index"
+        [class.active]="i === activeStep"
+      >
+        <button
+          type="button"
+          class="process-header"
+          (click)="toggleStep(i)"
+        >
+          <span class="process-index">{{ step.badge }}</span>
+          <span class="process-title">{{ step.title }}</span>
+          <span class="chevron"></span>
+        </button>
+        <div class="process-body" *ngIf="i === activeStep">
+          {{ step.content }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--KLİNİK BÖLÜM 10-->
+<section class="clinic-section py-5" id="clinictest">
+  <div class="container">
+    <div class="flex items-center mb-2">
+      <span class="text-custom-black text-lg mr-2" style="font-size: 1.2rem;">★ ★ ★ ★ ★ </span>
+    </div>
+    <p class="text-uppercase large mb-1 text-muted letter-space-3">
+      KLİNİĞİMİZ
+    </p>
+    <h2 class="mb-4 clinic-title">
+      Sanat Eseri Niteliğindeki Kliniğimizi Ziyaret Edin
+    </h2>
+    <!-- BOOTSTRAP CAROUSEL -->
+    <div id="clinicCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
+      <!-- indicator’lar -->
+      <div class="carousel-indicators clinic-indicators">
+        <button type="button" data-bs-target="#clinicCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="1"></button>
+        <button type="button" data-bs-target="#clinicCarousel" data-bs-slide-to="1" aria-label="2"></button>
+        <button type="button" data-bs-target="#clinicCarousel" data-bs-slide-to="2" aria-label="3"></button>
+        <button type="button" data-bs-target="#clinicCarousel" data-bs-slide-to="3" aria-label="4"></button>
+        <button type="button" data-bs-target="#clinicCarousel" data-bs-slide-to="4" aria-label="5"></button>
+        <button type="button" data-bs-target="#clinicCarousel" data-bs-slide-to="5" aria-label="6"></button>
+        <button type="button" data-bs-target="#clinicCarousel" data-bs-slide-to="6" aria-label="7"></button>
+        <button type="button" data-bs-target="#clinicCarousel" data-bs-slide-to="7" aria-label="8"></button>
+        <button type="button" data-bs-target="#clinicCarousel" data-bs-slide-to="8" aria-label="9"></button>
+        <button type="button" data-bs-target="#clinicCarousel" data-bs-slide-to="9" aria-label="10"></button>
+      </div>
+
+      <!-- slaytlar -->
+      <div class="carousel-inner rounded-3 overflow-hidden shadow-sm col-12 mx-auto">
+        <!-- 1 -->
+        <div class="carousel-item active">
+          <img src="assets/clinic/Dr-Terziler-Clinic1.webp" class="d-block w-100 clinic-img" alt="Klinik fotoğraf 1" />
+        </div>
+        <!-- 2 -->
+        <div class="carousel-item">
+          <img src="assets/clinic/Dr-Terziler-Clinic2.webp" class="d-block w-100 clinic-img" alt="Klinik fotoğraf 2" />
+        </div>
+        <!-- 3 -->
+        <div class="carousel-item">
+          <img src="assets/clinic/Dr-Terziler-Clinic3.webp" class="d-block w-100 clinic-img" alt="Klinik fotoğraf 3" />
+        </div>
+        <!-- 4 -->
+        <div class="carousel-item">
+          <img src="assets/clinic/Dr-Terziler-Clinic4.webp" class="d-block w-100 clinic-img" alt="Klinik fotoğraf 4" />
+        </div>
+        <!-- 5 -->
+        <div class="carousel-item">
+          <img src="assets/clinic/Dr-Terziler-Clinic5.webp" class="d-block w-100 clinic-img" alt="Klinik fotoğraf 5" />
+        </div>
+        <!-- 6 -->
+        <div class="carousel-item">
+          <img src="assets/clinic/Dr-Terziler-Clinic6.webp" class="d-block w-100 clinic-img" alt="Klinik fotoğraf 6" />
+        </div>
+        <!-- 7 -->
+        <div class="carousel-item">
+          <img src="assets/clinic/Dr-Terziler-Clinic7.webp" class="d-block w-100 clinic-img" alt="Klinik fotoğraf 7" />
+        </div>
+        <!-- 8 -->
+        <div class="carousel-item">
+          <img src="assets/clinic/Dr-Terziler-Clinic8.webp" class="d-block w-100 clinic-img" alt="Klinik fotoğraf 8" />
+        </div>
+        <!-- 9 -->
+        <div class="carousel-item">
+          <img src="assets/clinic/Dr-Terziler-Clinic9.webp" class="d-block w-100 clinic-img" alt="Klinik fotoğraf 9" />
+        </div>
+        <!-- 10 -->
+        <div class="carousel-item">
+          <img src="assets/clinic/Dr-Terziler-Clinic10.webp" class="d-block w-100 clinic-img" alt="Klinik fotoğraf 10" />
+        </div>
+      </div>
+
+      <!-- oklar -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#clinicCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Önceki</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#clinicCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Sonraki</span>
+      </button>
+    </div>
+
+    <!-- açıklama -->
+    <p class="text-muted fs-8 mb-2">
+      Dr. Terziler Exclusive Clinic, İstanbul’un en şık semti Etiler’de misafirlerini ağırlamaktadır. İç ve dış
+      mimaride sanatsal bir çizgi taşıyan bu yapı, konfor ve estetiği bir arada sunar.
+    </p>
+  </div>
+</section>
+
+<!--FORM VE İNFO BÖLÜM11 -->
+<section class="contact-section py-5">
+  <div class="container">
+    <div class="row g-4 align-items-start">
+      <div class="col-lg-5 col-md-6">
+        <p class="contact-tag mb-2 text-uppercase small">Klinik Bilgisi</p>
+        <h3 class="mb-4 fw-semibold">Dr. Terziler Exclusive Clinic</h3>
+
+        <div class="d-flex gap-3 mb-3 contact-line">
+          <div class="icon-box">
+            <img width="24" height="24" src="https://img.icons8.com/ios-filled/50/marker.png" alt="marker"/>
+          </div>
+          <div>
+            <p class="mb-0 fw-semibold">Akat Mah. Ebulula Mardin Cad. No: 20</p>
+            <p class="mb-0 text-muted small">Beşiktaş, İstanbul / Turkey, 34330</p>
+          </div>
+        </div>
+
+        <div class="d-flex gap-3 mb-3 contact-line">
+          <div class="icon-box">
+            <img width="24" height="24" src="https://img.icons8.com/ios-filled/50/phone.png" alt="phone"/>
+          </div>
+          <div>
+            <a href="tel:+902129860767" class="d-block fw-semibold text-decoration-none contact-link">
+              +90 212 986 07 67
+            </a>
+          </div>
+        </div>
+
+        <div class="d-flex gap-3 mb-4 contact-line">
+          <div class="icon-box">
+            <img width="24" height="24" src="https://img.icons8.com/material-rounded/24/mail.png" alt="mail"/>
+          </div>
+          <div>
+            <a href="mailto:info@drterziler.com" class="d-block text-decoration-none contact-link">
+              info@drterziler.com
+            </a>
+          </div>
+        </div>
+        <div class="d-flex gap-3 flex-wrap">
+          <img src="assets/trustpilot_rev.png" alt="Trustpilot" height="100" />
+          <img src="assets/google_rev.png" alt="Google Reviews" height="100" />
+        </div>
+      </div>
+      <div class="col-lg-5 offset-lg-2 col-md-6">
+        <form [formGroup]="contactForm" (ngSubmit)="submit()" class="contact-form p-3 p-sm-4">
+          <div class="mb-3">
+            <label class="form-label">İsminiz *</label>
+            <input
+              type="text"
+              class="form-control"
+              formControlName="name"
+              placeholder="Halat Aksoy"
+            />
+            <div class="text-danger small" *ngIf="f['name'].touched && f['name'].invalid">
+              <div *ngIf="f['name'].errors?.['required']">İsim zorunludur.</div>
+              <div *ngIf="f['name'].errors?.['minlength']">En az 2 karakter girin.</div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Telefon Numarası *</label>
+            <input
+              type="text"
+              class="form-control"
+              formControlName="phone"
+              placeholder="+90 539 123 45 67"
+            />
+            <div class="text-danger small" *ngIf="f['phone'].touched && f['phone'].invalid">
+              <div *ngIf="f['phone'].errors?.['required']">Telefon zorunludur.</div>
+              <div *ngIf="f['phone'].errors?.['pattern']">Geçerli bir telefon girin.</div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">E-mail</label>
+            <input
+              type="email"
+              class="form-control"
+              formControlName="email"
+              placeholder="example@gmail.com"
+            />
+            <div class="text-danger small" *ngIf="f['email'].touched && f['email'].invalid">
+              <div *ngIf="f['email'].errors?.['email']">Geçerli bir e-mail girin.</div>
+            </div>
+          </div>
+
+          <button class="btn w-100 text-white" style="background-color: #002b71;" type="submit">
+            Ücretsiz Danışmanlık Al
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-footer></app-footer>
+
+
+
+

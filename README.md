@@ -1,19 +1,21 @@
-# 🩺 Klinik Web Sitesi (Angular + Bootstrap)
+# 🩺 Klinik Web Arayüzü (Angular + Bootstrap)
 
-Bu proje, **Dr. Terziler Exclusive Clinic** web sitesinden esinlenilerek, tamamen **öğrenme ve pratik amacıyla** tarafımdan (Halat Aksoy) geliştirilmiş bir **alıştırma projesidir**.  
-Arayüz sıfırdan oluşturulmuş olup, **Angular** ve **Bootstrap 5** kullanılarak responsive ve modern bir yapı hedeflenmiştir.
+Bu proje, bir klinik web sitesinin tasarımından esinlenilerek hazırlanmış **eğitim ve pratik** amaçlı bir çalışmadır.  
+Arayüz tamamen **Angular** ve **Bootstrap 5** teknolojileriyle sıfırdan geliştirilmiş olup, responsive (mobil uyumlu) olacak şekilde optimize edilmiştir.  
+Proje ticari amaç taşımamaktadır.
 
 ---
 
-## 🚀 Özellikler
+## 🧩 Genel Özellikler
 
 - 💻 **Tamamen responsive** (mobil, tablet, masaüstü uyumlu)
-- 🧭 **Bootstrap navbar** — küçük ekranlarda hamburger menüye dönüşür
-- 🧠 **Angular Reactive Form** — validasyonlu form alanları
-- 🩺 **Accordion bölümü** — hizmetleri dinamik biçimde açıp kapatır
-- 🏢 **Klinik slider** — Bootstrap Carousel ile görsellerin otomatik geçişi
-- 📍 **İletişim bölümü** — ikonlu adres, mail ve telefon alanları
-- 🧱 **Temiz component yapısı** ve minimal SCSS kullanımı
+- 🧭 **Bootstrap Navbar** – küçük ekranlarda hamburger menüye dönüşür
+- 🧠 **Reactive Form** – validasyonlu form alanları (isim, telefon, e-mail)
+- 🩺 **Accordion yapısı** – açılıp kapanabilen bilgi alanları
+- 🏢 **Klinik galeri** – Bootstrap carousel ile kaydırılabilir görseller
+- 🎥 **Hizmetler bölümü** – YouTube embed videolarıyla oluşturulmuştur
+- 📍 **İletişim bölümü** – ikonlu adres, telefon ve e-mail alanları
+- ⚙️ **Component bazlı yapı** – Angular modüler yaklaşım
 
 ---
 
@@ -30,11 +32,27 @@ Arayüz sıfırdan oluşturulmuş olup, **Angular** ve **Bootstrap 5** kullanıl
 
 ---
 
-## ⚙️ Kurulum
+## ⚙️ Gereksinimler
+
+Projeyi çalıştırmadan önce aşağıdakilerin yüklü olduğundan emin olun:
+
+- **Node.js** (sürüm 18.x veya 20.x)  
+  👉 [https://nodejs.org](https://nodejs.org)
+- **npm** (Node ile birlikte gelir)
+- **Angular CLI** (global olarak kurulu olmalı)
+
+Angular CLI yüklü değilse şu komutla yükleyebilirsiniz:
+```bash
+npm install -g @angular/cli
+
 
 Projeyi yerel ortamında çalıştırmak için:
 
 ### 1️⃣ Depoyu klonla
 ```bash
 git clone https://github.com/<halataksoy>/<my-new-website>.git
+### 2️⃣ Bağımlılıkları Yükleyin
+npm install
+### 3️⃣ Uygulamayı Başlatın
+ng serve
 
